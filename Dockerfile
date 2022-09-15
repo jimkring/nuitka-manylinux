@@ -74,7 +74,7 @@ RUN \
        CONFIGURE_OPTS="--with-openssl=${OPENSSL_DIR}" PYTHON_CONFIGURE_OPTS="--enable-shared" \
        pyenv install ${PYTHON_LAST} \
     && pyenv global ${PYTHON_LAST} \
-    && pyenv exec pip install --upgrade pip setuptools wheel \
+    && pyenv exec pip install --upgrade pip setuptools wheel auditwheel \
     && pyenv exec pip install --upgrade nuitka==$NUITKA_VERSION
 
 COPY entrypoint.sh /entrypoint.sh
