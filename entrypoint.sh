@@ -49,5 +49,5 @@ fi # [ -f requirements.txt ]
 
 echo "Nuitka parameters: $@"
 
-pyenv exec nuitka $@
+pyenv exec python -m nuitka $@
 chown -R --reference=. ./dist
