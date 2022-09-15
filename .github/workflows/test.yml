@@ -23,4 +23,4 @@ jobs:
     - name: Run app binary and check output
       run: |
         chmod +x ./dist/app
-        [[ $(./dist/app) == "Hello out there 👋" ]]
+        [[ $(./dist/app) == "Hello out there 👋!" ]]
