@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Binary using Nutika ManyLinux 2.24 Docker Action
-      uses: jimkring/nutika-manylinux
+      uses: jimkring/nutika-manylinux@master
       with:
         nutika-params: "['--module', 'tests/app.py']"
     - name: Upload Binary Distribution to Release
