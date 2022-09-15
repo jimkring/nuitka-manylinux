@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build Binary using Nutika ManyLinux 2.24 Docker Action
+    - name: Build Binary using Nuitka ManyLinux 2.24 Docker Action
       uses: jimkring/nuitka-manylinux@master
       with:
-        nutika-params: "['--module', 'tests/app.py']"
+        nuitka-params: "['--module', 'tests/app.py']"
     - name: Upload Binary Distribution to Release
       uses: actions/upload-artifact@v2
       with:
