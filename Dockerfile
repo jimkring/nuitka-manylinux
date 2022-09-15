@@ -7,7 +7,7 @@ SHELL ["/bin/bash", "-c"]
 ARG HOME=/root
 ARG PYTHON_VERSION=3.6
 ARG PYTHON_LAST=3.6.15
-ARG PYINSTALLER_VERSION=3.6
+ARG NUITKA_VERSION=1.0.6
 ARG OPENSSL_DIR=/usr/local/ssl
 
 ENV PYPI_URL=https://pypi.python.org/
@@ -17,7 +17,7 @@ ENV HOME=${HOME}
 # we use Python 3.6
 ENV PYTHON_VERSION=${PYTHON_VERSION}
 ENV PYTHON_LAST=${PYTHON_LAST}
-ENV PYINSTALLER_VERSION=${PYINSTALLER_VERSION}
+ENV NUITKA_VERSION=${NUITKA_VERSION}
 # ENV PY36_BIN=/opt/_internal/cpython-3.6.15/bin
 # Ensure we use PY36 in the PATH
 # ENV PATH="${PY36_BIN}:$PATH"
@@ -74,7 +74,7 @@ RUN \
        pyenv install ${PYTHON_LAST} \
     && pyenv global ${PYTHON_LAST} \
     && pyenv exec pip install --upgrade pip setuptools wheel \
-    && pyenv exec pip install --upgrade pyinstaller==$PYINSTALLER_VERSION
+    && pyenv exec pip install --upgrade nuitka==$NUITKA_VERSION
 
 COPY entrypoint.sh /entrypoint.sh
 

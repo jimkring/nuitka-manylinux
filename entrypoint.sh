@@ -47,7 +47,7 @@ if [ -f requirements.txt ]; then
     pyenv exec pip install -r requirements.txt
 fi # [ -f requirements.txt ]
 
-echo "PyInstaller parameters: $@"
+echo "Nuitka parameters: $@"
 
-pyenv exec pyinstaller --clean -y --dist ./dist "$@"
+pyenv exec nuitka $@
 chown -R --reference=. ./dist
