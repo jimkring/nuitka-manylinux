@@ -9,6 +9,7 @@ inputs:
     required: true
 runs:
   using: "docker"
-  image: "Dockerfile"
+  # image: "Dockerfile"
+  image: ghcr.io/jimkring/nuitka-manylinux:latest
   args:
     - ${{ fromJSON(inputs.nuitka-params) }}

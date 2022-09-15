@@ -1,6 +1,7 @@
+#FROM ghcr.io/jimkring/nuitka-manylinux:latest AS compile-image
 FROM quay.io/pypa/manylinux_2_24_x86_64 AS compile-image
 
-LABEL maintainer="Oleksis Fraga <oleksis.fraga at gmail.com>"
+LABEL maintainer="Jim Kring <jim.kring at gmail.com>"
 
 SHELL ["/bin/bash", "-c"]
 
